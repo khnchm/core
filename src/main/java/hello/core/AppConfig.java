@@ -29,6 +29,8 @@ public class AppConfig {
     public OrderService orderService(){
         System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
+
+        //return null;
     }
 
     @Bean
@@ -36,4 +38,6 @@ public class AppConfig {
         //return new FixDiscountPolicy();
         return new RateDiscountPolicy();
     }
+
+
 }
